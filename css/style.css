@@ -91,6 +91,14 @@ article::first-letter {
     text-transform: capitalize;
 }
 
+blockquote::before{
+    content: open-quote;
+}
+
+blockquote::after{
+    content: close-quote;
+}
+
 footer {
     background: var(--backgroundcolor);
     padding: 5px;
