@@ -1,0 +1,97 @@
+:root {
+    --backgroundcolor:grey;
+    --backgroundcolorNav: rgb(44, 42, 42);
+    --gridcolor: yellow;
+    --font-size:16px;
+    --firstLastBackground: white;
+    --padding: 5px;
+}
+/* nav {
+    padding: var(--padding);
+} */
+li a{
+    text-decoration: none;
+    color: var(--gridcolor);
+}
+
+li {
+    transition: 0.5s ease-in;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: calc(var(--padding)*5);
+    margin: var(--padding);
+    text-decoration: none;
+}
+
+
+/* Change the link color on hover */
+
+li:nth-child(1):hover{
+    background-color:red;
+
+}
+
+li:nth-child(2):hover{
+    background-color:aqua;
+}
+
+li:nth-child(3):hover{
+    background-color:red;
+}
+
+li:nth-child(4):hover{
+    background-color:rgb(0, 60, 255);
+}
+li:nth-child(5):hover{
+    background-color:rgb(255, 0, 128);
+}
+li:nth-child(6):hover{
+    background-color:green;
+}
+
+a::before { 
+    content: "~ "
+}
+
+main {
+    background: var(--gridcolor);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+article {
+    background: var(--backgroundcolor);
+}
+
+article:first-child, article:last-child {
+    background: var(--firstLastBackground);
+}
+
+article:nth-child(4n+1) {
+    grid-column: 1/2;
+}
+
+article:nth-child(4n+2) {
+    grid-column: 2/5;
+
+}
+article:nth-child(4n+3) {
+    grid-column: 1/4;
+}
+
+article:nth-child(4n+4) {
+    grid-column: 4/5;
+
+}
+
+article::first-letter { 
+    font-size: 150%;
+    text-transform: capitalize;
+}
+
+footer {
+    background: var(--backgroundcolor);
+    padding: 5px;
+}
